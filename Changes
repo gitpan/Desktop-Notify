@@ -1,0 +1,10 @@
+Revision history for Desktop-Notify
+
+0.01    2007-05-07
+        Stuff that works:
+            creating/displaying/modifying/updating/closing nofitications
+            catching close signals
+        Stuff that's not implemented yet:
+            actions
+            hints
+            icons
