@@ -1,13 +1,24 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Desktop-Notify
-version:      0.01
-version_from: lib/Desktop/Notify.pm
-installdirs:  site
+--- #YAML:1.0
+name:               Desktop-Notify
+version:            0.02
+abstract:           Communicate with the Desktop Notifications framework
+author:
+    - Stephen Cavilia <sac@atomicradi.us>
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    Class::Accessor:               0
-    Net::DBus:                     0
-    Test::More:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+    Class::Accessor:  0
+    Net::DBus:        0
+    Test::More:       0
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.55_02
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

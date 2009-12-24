@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Desktop::Notify',
-    AUTHOR              => 'Stephen Cavilia <sac7352@rit.edu>',
+    AUTHOR              => 'Stephen Cavilia <sac@atomicradi.us>',
     VERSION_FROM        => 'lib/Desktop/Notify.pm',
     ABSTRACT_FROM       => 'lib/Desktop/Notify.pm',
     PL_FILES            => {},
