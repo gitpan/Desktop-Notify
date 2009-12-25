@@ -15,11 +15,11 @@ Desktop::Notify - Communicate with the Desktop Notifications framework
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -157,7 +157,7 @@ sub close_callback {
 
 =head1 AUTHOR
 
-Stephen Cavilia, C<< <sac7352 at rit.edu> >>
+Stephen Cavilia, C<< <sac at atomicradi.us> >>
 
 =head1 SEE ALSO
 

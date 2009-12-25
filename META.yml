@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Desktop-Notify
-version:            0.02
+version:            0.03
 abstract:           Communicate with the Desktop Notifications framework
 author:
     - Stephen Cavilia <sac@atomicradi.us>

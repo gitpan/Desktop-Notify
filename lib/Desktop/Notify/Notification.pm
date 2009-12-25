@@ -14,16 +14,16 @@ notifications framework
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
     # $notify is an existing Desktop::Notify object
-    my $note = $notify->create(sumamry => 'Rebuilding FooBar',
+    my $note = $notify->create(summary => 'Rebuilding FooBar',
                                body => 'Progress: 10%');
     $note->show;
     
@@ -58,8 +58,7 @@ sub new {
 
     my $self = \%params;
     $self->{server} = $server;
-    $self->{id} = 0;
-    $self->{timeout} = 0;
+    $self->{id} = undef;
     bless $self, $class;
 }
 
@@ -78,13 +77,13 @@ sub show {
 
     $self->{id} = $self->{server}->{notify}
         ->Notify($self->{server}->{app_name},
-                 $self->{id},
+                 $self->{id} || 0,
                  '',
                  $self->{summary},
                  $self->{body},
                  [],
                  {},
-                 $self->{timeout},
+                 $self->{timeout} || 0,
                 );
     $self->{server}->_register_notification($self);
     return $self;
@@ -99,10 +98,13 @@ Close the notification if it is already being displayed.
 sub close {
     my $self = shift;
 
-    if ($self->{id} > 0)
+    if (defined $self->{id})
     {
         $self->{server}->{notify}->CloseNotification($self->{id});
         delete $self->{id};
+    } else
+    {
+        warn "Trying to close notification that has not been shown.";
     }
     return $self;
 }

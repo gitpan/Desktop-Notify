@@ -1,5 +1,12 @@
 Revision history for Desktop-Notify
 
+0.03    2009-12-25
+        Fixed regression in 0.02 when creating notification with timeout
+        Show a warning when closing a notification that has not been shown
+
+0.02    2009-12-24
+        Fixed non-numeric id/timeout bugs
+
 0.01    2007-05-07
         Stuff that works:
             creating/displaying/modifying/updating/closing nofitications
